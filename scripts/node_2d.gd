@@ -18,6 +18,8 @@ func _on_death_zone_area_entered(area):
 
 func _on_player_damage():
 	lives-=1
+	score -=100
+	hud.score_label(score)
 	hud.set_lives(lives)
 	player_damage.play()
 	

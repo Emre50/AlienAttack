@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://bt3qfr20v3qvl"]
+
+[ext_resource type="FontFile" uid="uid://b43ytg05fiy4r" path="res://assets/font/Kenney Blocks.ttf" id="1_84dyj"]
+[ext_resource type="Script" path="res://scripts/control.gd" id="1_xtkp5"]
+[ext_resource type="Texture2D" uid="uid://cwv25hvod63j1" path="res://assets/textures/orb.png" id="3_m2y3p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iv3ij"]
+font = ExtResource("1_84dyj")
+font_size = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_l6gbs"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_c221t"]
+font = ExtResource("1_84dyj")
+font_size = 35
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xtkp5")
+
+[node name="score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 2.0
+offset_right = 246.0
+offset_bottom = 71.0
+text = "SCORE: "
+label_settings = SubResource("LabelSettings_iv3ij")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 73.0
+offset_right = 160.0
+offset_bottom = 191.0
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("3_m2y3p")
+
+[node name="x" type="Label" parent="."]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 99.0
+offset_right = 154.0
+offset_bottom = 122.0
+text = "X"
+label_settings = SubResource("LabelSettings_l6gbs")
+
+[node name="live" type="Label" parent="."]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 95.0
+offset_right = 180.0
+offset_bottom = 144.0
+text = "3"
+label_settings = SubResource("LabelSettings_c221t")

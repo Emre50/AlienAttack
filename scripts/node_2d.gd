@@ -15,6 +15,8 @@ func _ready():
 
 func _on_death_zone_area_entered(area):
 	area.die()
+	score -= 100
+	hud.score_label(score)
 
 func _on_player_damage():
 	lives-=1
@@ -34,7 +36,14 @@ func _on_enemy_spawn_enemy_spawn(enemy_instance):
 	enemy_instance.connect("died", on_enemy_died)
 	add_child(enemy_instance)
 
+func _on_enemy_spawn_path_enemy_spawn(path_enemy_instance):
+	add_child(path_enemy_instance)
+	path_enemy_instance.enemy.connect("died", on_enemy_died)
+
 func on_enemy_died():
 	score += 100
 	hud.score_label(score)
 	enemy_hit_sound.play()
+
+
+

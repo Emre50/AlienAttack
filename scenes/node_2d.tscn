@@ -49,4 +49,5 @@ stream = ExtResource("7_jrd20")
 
 [connection signal="damage" from="Player" to="." method="_on_player_damage"]
 [connection signal="enemy_spawn" from="EnemySpawn" to="." method="_on_enemy_spawn_enemy_spawn"]
+[connection signal="path_enemy_spawn" from="EnemySpawn" to="." method="_on_enemy_spawn_path_enemy_spawn"]
 [connection signal="area_entered" from="DeathZone" to="." method="_on_death_zone_area_entered"]
